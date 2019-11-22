@@ -1,0 +1,729 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Oswald:300,500|Playfair+Display:700);@import url(https://use.fontawesome.com/releases/v5.6.0/css/all.css);/* == Colors == */
+
+/* == General == */
+
+body {
+  background: #f9f9f9;
+}
+
+.portfolio-info {
+	color: #ccc;
+}
+
+	.portfolio-info p {
+		font-style: italic;
+		margin: 4px 0px 0px 0px;
+	}
+
+.unread {
+	vertical-align: middle;
+	font-weight: 700;
+	position: relative;
+		top: -3px;
+}
+
+.current-stats .unread {
+	position: absolute;
+		top: 10px;
+		right: 10px;
+}
+
+.label {
+  border-radius: 50px 50px 50px 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.label.success {
+  background: #6cb584;
+  color: #fff;
+}
+
+span.reg {
+	font-size: 0.5em;
+	vertical-align: super;
+}
+
+section {
+  background: #fff;
+  margin-bottom: 35px;
+  padding: 25px;
+}
+
+.positive {
+  color: #6cb584 !important;
+}
+
+.negative {
+  color: #d65b4c !important;
+}
+
+/* == Typography == */
+
+h1 {
+  font: normal 300 2.5em/1em "Oswald", sans-serif;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font: normal 300 1.75em/1em "Oswald", sans-serif;
+}
+
+h2 span {
+  color: #777;
+  font: italic 400 0.50em/1em "Open Sans", sans-serif;
+  margin-left: 7px;
+}
+
+h3 {
+  font: normal 300 2.00em/1em "Oswald", sans-serif;
+}
+
+h4 {
+  font: normal 300 1.35em/1em "Oswald", sans-serif;
+}
+
+h5 {
+  font: normal 400 1.35em/1em "Open Sans", sans-serif;
+}
+
+h6 {
+  font: normal 700 0.800em/1em "Open Sans", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+p,ul,ol {
+  font: normal 400 0.95em/1.5em "Open Sans", sans-serif;
+  margin: 15px 0px 0px 0px;
+}
+
+li {
+  line-height: 2em;	
+}
+
+.answer {
+	font: normal 400 0.95em/1.5em "Open Sans", sans-serif;
+	padding: 7px;
+}
+
+	.answer.selected {
+		background: #d65b4c;
+		color: #fff;
+	}
+	
+	.answer.correct {
+		background: #6cb584;
+		color: #fff;
+	}
+
+ul,ol {
+	margin-left: 25px;
+}
+
+/* == Button == */
+
+.button {
+  background: #629eda;
+  font: normal 500 1em/1em "Oswald", sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.button.green {
+  background: #6cb584;
+}
+
+/* == Form == */
+
+input {
+  font: normal 400 1em/1em "Open Sans", sans-serif;
+}
+
+/* == Header == */
+
+header {
+  background: #fff;
+  margin-bottom: 50px;
+  padding: 15px 0px;
+}
+
+header .logo {
+  color: #6cb584;
+  display: inline-block;
+  font: normal 700 2.5em/1em "Playfair Display", serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+header .name {
+  display: inline-block;
+  font: normal 300 1.25em/1em "Oswald", sans-serif;
+  margin-left: 10px;
+  position: relative;
+  top: 3px;
+  vertical-align: middle;
+}
+
+header .risk {
+  background: #629eda;
+  color: #fff;
+  display: inline-block;
+  font: normal 700 0.875em/1em "Open Sans", sans-serif;
+  margin-left: 10px;
+  padding: 5px 7px;
+  position: relative;
+  top: 3px;
+  vertical-align: middle;
+}
+
+header nav a {
+  border-bottom: 2px solid transparent;
+  color: #6cb584;
+  display: inline-block;
+  font: normal 500 1em/1em "Oswald", sans-serif;
+  margin-left: 25px;
+  padding: 7px 0px 5px 0px;
+  text-transform: uppercase;
+}
+
+header nav a:hover {
+  border-bottom-color: #6cb584;
+  color: #6cb584;
+}
+
+header nav a:first-child {
+  margin-left: 0px;
+}
+
+header nav .place-a-trade {
+  background: #629eda;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header nav .place-a-trade:hover {
+  color: #fff;
+}
+
+/* == Footer == */
+
+footer {
+  background: #6cb584;
+  color: #fff;
+  margin-top: 35px;
+  padding: 35px 0px;
+}
+
+footer .copyright {
+  font: normal 400 0.9em/1.4em "Open Sans", sans-serif;
+}
+
+footer .copyright a {
+  color: #fff;
+}
+
+footer nav a {
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  display: inline-block;
+  font: normal 500 1em/1em "Oswald", sans-serif;
+  margin-left: 20px;
+  padding: 7px 0px 5px 0px;
+  text-transform: uppercase;
+}
+
+footer nav a:hover {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+footer nav a:first-child {
+  margin-left: 0px;
+}
+
+/* == Login == */
+
+.form {
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form .form-box {
+  background: #fff;
+  font: normal 400 0.9em/1.2em "Open Sans", sans-serif;
+  margin: 10px 0px 0px 0px;
+  padding: 25px;
+  width: 100%;
+}
+
+.form .form-box input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+.form .form-box .forgot-password {
+  color: #6cb584;
+  font: italic 400 1em/1.2em "Open Sans", sans-serif;
+  margin-right: 15px;
+}
+
+/* == Sections == */
+
+section .button {
+  margin-top: 15px;
+}
+
+/* == Portfolio == */
+
+.create-portfolio {
+  margin-top: 35px;
+}
+
+.portfolio-graphic {
+  margin: 0px auto 35px auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+.current-stats .number {
+  border-bottom: 1px solid #f2f2f2;
+  color: #0a0a0a;
+  font: normal 300 2.25em/1em "Oswald", sans-serif;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.current-stats .number.market {
+  font-size: 2.75em;
+}
+
+.portfolio-name {
+  color: #0a0a0a;
+  font: normal 700 0.9em/1em "Open Sans", sans-serif;
+}
+
+.current-stats .portfolio-change {
+  font: normal 700 1.5em/1em "Open Sans", sans-serif;
+}
+
+.current-stats .portfolio-change.market {
+  font-size: 1em;
+}
+
+.graph {
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+
+table {
+  width: 100% !important;
+}
+
+table thead {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+table thead td {
+  font: normal 700 0.85em/1em "Open Sans", sans-serif;
+}
+
+table tbody {
+  border: none;
+}
+
+table tbody tr:nth-child(even) {
+  background: none;
+}
+
+table tbody td {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font: normal 400 0.85em/1em "Open Sans", sans-serif;
+}
+
+table tbody tr td:last-child {
+  border-right: none;
+}
+
+/* == Place A Trade == */
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.callout.primary {
+	background: #629eda;
+	border: none;
+	color: #fff;
+	margin: 0px;
+	text-align: center;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+#place-a-trade {
+  background: #fff;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+  position: fixed;
+  top: 50px;
+  right: 50%;
+  max-width: 500px; max-height: 85%;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+#place-a-trade.visible {
+  display: block;
+}
+
+#place-a-trade .open-menu {
+  border-bottom: 1px solid #ccc;
+  font: normal 700 1em/1em "Open Sans", sans-serif;
+  margin-top: 20px;
+  padding: 10px 10px;
+}
+
+#place-a-trade .open-menu.active {
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+#place-a-trade .purchase-menu {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 20px;
+}
+
+#place-a-trade .purchase-menu#sell {
+  display: none;
+}
+
+#place-a-trade .close-window {
+  cursor: pointer;
+}
+
+/* == Student Tools == */
+
+#student-tools a {
+  background: #629eda;
+  color: #fff;
+  display: inline-block;
+  font: normal 500 0.9em/1em "Oswald", sans-serif;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+#student-tools a:last-child {
+  margin-right: 0px;
+}
+
+.credits {
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+#assessment p,
+#research p,
+#transactions p,
+#company-information p,
+#quiz p {
+  margin-bottom: 25px;
+}
+
+#quiz h4 {
+	margin-bottom: 20px;
+}
+
+#company-information h6 {
+  margin-top: 15px;
+}
+
+.goal {
+  margin-bottom: 25px;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+.divider {
+  background: #f2f2f2;
+  margin: 35px 0px;
+  width: 100%;
+  height: 1px;
+}
+
+.disclaimer {
+  color: #bbb;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+#other-goal {
+  display: none;
+}
+
+#search-results {
+  display: none;
+  padding-bottom: 20px;
+}
+
+#search-results .result {
+  border-bottom: 1px solid #ccc;
+  padding: 7px 5px;
+  font: normal 400 0.825em/1em "Open Sans", sans-serif;
+}
+
+#search-results .result:last-child {
+  border-bottom: none;
+}
+
+#pricing, #sell-pricing {
+  font: normal 400 0.9em/1em "Open Sans", sans-serif;
+}
+
+#pricing tbody, #sell-pricing tbody {
+  border: none;
+}
+
+#pricing tr, #sell-pricing tr {
+  border-bottom: 1px solid #ccc;
+}
+
+#pricing tr:nth-child(even), #sell-pricing tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+#pricing .total, #sell-pricing .total {
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+#pricing .cash-remaining, #sell-pricing .cash-remaining {
+  background: none !important;
+  border: none;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.today-change {
+  font: italic 400 0.875em/1em "Open Sans", sans-serif;
+  margin-top: 5px;
+}
+
+.teacher-code {
+	margin-top: 20px;
+}
+
+.home {
+	position: relative;
+}
+
+.stars {
+	background: #f3c931;
+	border-radius: 100px 100px 100px 100px;
+	color: #c19f25;
+	line-height: 1.87em;
+	margin-left: -15px;
+	position: absolute;
+		top: -15px;
+		left: 50%;
+	text-align: center;
+	width: 30px; height: 30px;
+}
+
+.star-note {
+	background: #f3c931;
+	border-radius: 100px 100px 100px 100px;
+	color: #c19f25;
+	display: inline-block;
+	font-size: 0.70em;
+	line-height: 1.90em;
+	margin-right: 5px;
+	position: relative;
+		top: -2px;
+	text-align: center;
+	width: 20px; height: 20px;
+	vertical-align: middle;
+}
+
+#compose, #messages {
+	margin-top: 15px;
+}
+
+.message {
+	background: #629eda;
+	border-radius: 10px 10px 10px 10px;
+	color: #fff;
+	display: inline-block;
+	margin: 5px 0px;
+	padding: 10px 20px 14px 20px;
+	min-width: 400px; max-width: 550px;
+}
+
+	.message p {
+		font-weight: 700;
+		margin: 0px;
+	}
+	
+	.message.your-message {
+		background: #6cb584;
+		text-align: left;
+	}
+	
+#messages .grid-x:first-child .message {
+	margin-top: 0px;
+}
+
+#messages .grid-x:last-child .message {
+	margin-bottom: 0px;
+}
+
+.message-details {
+	font: italic 0.8em/1em "Open Sans", sans-serif;
+	margin-top: 5px;
+}
+
+#messages-container {
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-height: 400px;
+}
+
+.class {
+	margin-top: 25px;
+}
+
+	.class-title h3 {
+		font-size: 1.35em;
+		margin: 0px;
+	}
+	
+	.class-title h2 {
+		margin: 0px;
+	}
+
+.class-title {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 25px;
+	padding-bottom: 10px;
+}
+
+.grade {
+	font-size: 4em;
+}
+
+.results {
+	margin-bottom: 25px;
+}
+
+.no-margin {
+	margin: 0px;
+}
+
+.graph {
+	position: relative;
+	height: 150px;
+}
+
+	.graph:before {
+		background: #eeeeee;
+		content: "";
+		display: block;
+		position: absolute;
+			left: 0px;
+			top: 50%;
+		width: 100%; height: 1px;
+		z-index: 1;
+		
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		   	-ms-transform: translateY(-50%);
+		   		transform: translateY(-50%);
+	}
+
+	.graph .point {
+		border-radius: 50px 50px 50px 50px;
+		display: block;
+		position: absolute;
+		width: 10px; height: 10px;
+		z-index: 100;
+		
+		-webkit-transform: translateY(50%);
+		   -moz-transform: translateY(50%);
+		   	-ms-transform: translateY(50%);
+		   		transform: translateY(50%);
+	}
+	
+		.graph .point.positive {
+			background: #6cb584;
+		}
+		
+		.graph .point.negative {
+			background: #d65b4c;
+		}
+		
+.resource {
+	border-bottom: 1px solid #f2f2f2;
+	padding: 25px 0px;
+}
+
+	.resource p {
+		margin: 18px 0px 0px 0px !important;
+	}
+	
+	.resource .resource-link {
+		background: #629eda;
+		border-radius: 50px 50px 50px 50px;
+		color: #fff;
+		display: inline-block;
+		margin-right: 7px;
+		margin-top: 7px;
+		padding: 4px 15px;
+	}
+	
+	.resource .resource-link i {
+		margin-right: 5px;
+	}
+	
+	#resources .resource:first-child {
+		padding-top: 0px;
+	}
+	
+	#resources .resource:last-child {
+		border: none;
+		padding-bottom: 0px;
+	}
+	
+.delete-class {
+	color: #999;
+	font: normal 0.8em/1em "Open Sans", sans-serif;
+	text-decoration: underline;
+}
+
+.edit-portfolio, .delete-portfolio {
+	font-size: 16px;
+}

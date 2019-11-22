@@ -1,0 +1,104 @@
+@extends('layouts.app')
+
+@section('content')
+	
+	<div id="research">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x align-center">
+				<div class="small-12 medium-10 cell">
+					<div class="grid-x grid-padding-x">
+						<div class="small-12 cell">
+							@foreach (['danger', 'warning', 'success', 'info'] as $msg)
+					      @if(Session::has($msg))
+					      <div class="callout {{ $msg }}">{{ Session::get($msg) }}</div>
+					      @endif
+					    @endforeach
+						</div>
+					</div>
+				
+					<h1>Research Log</h1>
+					<p>The more detail entered in this screen now the less information you will have to go back and find later. A works cited page may be able to generate from the data you enter now.</p>
+					<section>
+						<div class="grid-x grid-padding-x">
+							<div class="small-12 cell">
+								<form action="" method="post">
+									@csrf
+									<div class="grid-x grid-padding-x">
+										<div class="small-12 medium-6 cell">
+											<label>
+												Source (Website or Publication)
+												<input type="text" name="source" value="{{ $research->source }}" required />
+											</label>
+										</div>
+										<div class="small-12 medium-6 cell">
+											<label>
+												Author/Editor
+												<input type="text" name="author" value="{{ $research->author }}" required />
+											</label>
+										</div>
+									</div>
+									<div class="grid-x grid-padding-x">
+										<div class="small-12 medium-6 cell">
+											<label>
+												Company Name (If Applicable)
+												<input type="text" name="company_name" value="{{ $research->company_name }}" required />
+											</label>
+										</div>
+										<div class="small-12 medium-6 cell">
+											<label>
+												Ticker (If Applicable)
+												<input type="text" name="ticker" value="{{ $research->ticker }}" required />
+											</label>
+										</div>
+									</div>
+									<div class="grid-x grid-padding-x">
+										<div class="small-12 medium-6 cell">
+											<label>
+												Title of Article
+												<input type="text" name="title" value="{{ $research->title }}" required />
+											</label>
+										</div>
+										<div class="small-12 medium-6 cell">
+											<label>
+												Date of Article
+												<input type="text" name="date_of_article" value="{{ $research->date_of_article }}" required />
+											</label>
+										</div>
+									</div>
+									<div class="grid-x grid-padding-x">
+										<div class="small-12 cell">
+											<label>
+												Comments
+												<textarea name="comments" required>{{ $research->comments }}</textarea>
+											</label>
+										</div>
+									</div>
+									<div class="grid-x grid-padding-x">
+										<div class="small-12 cell">
+											<label>
+												Tags (separate each tag by a comma)
+												<input type="text" name="tags" value="{{ $research->tags }}" />
+											</label>
+										</div>
+									</div>
+									<div class="grid-x grid-padding-x">
+										<div class="small-12 cell text-right">
+											<button type="submit" class="button">Submit Research</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+					
+					<div class="grid-x grid-padding-x">
+						<div class="small-12 cell text-right">
+							<a href="/portfolio/{{ $portfolio->slug }}" class="button">Back To Portfolio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+@endsection
